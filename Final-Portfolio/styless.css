@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+li, a, button {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+}
+
+button {
+    background-color: #050505; /* Set button background to blue */
+    color: white; /* Set text color to white */
+    padding: 10px 20px;
+    margin: 10px; /* Add margin for spacing around the button */
+    border-radius: 25px; /* Keep rounded corners */
+    border: none; /* Remove border */
+    font-family: "Montserrat", sans-serif; /* Ensure consistent font */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add smooth hover effect */
+}
+
+button:hover {
+    background-color: #d1d2d3; /* Darker blue on hover */
+    color: #000000;
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: 30px;
+    transition: 200ms;
+}
+
+h1:hover{
+    color: rgb(167, 167, 167);
+}
+header {
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    margin: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.nav-logo {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+}
+
+nav ul {
+    display: flex;
+    gap: 70px;
+}
+
+nav a {
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    transition: .3s;
+}
+
+nav a:hover {
+    text-decoration: none;
+    font-weight: 600;
+}
