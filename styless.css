@@ -1,44 +1,60 @@
+  /* ✅ Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&family=Montserrat:wght@400;600&display=swap');
 
 /* ✅ Base Reset & Body Styles */
 * {
-  padding: 0;
-  margin: 0;
+  background-color: #ffffff;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "DM Sans", sans-serif;
   background-color: #fff;
   color: #000;
-  line-height: 1.6; 
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+  margin-top: 80px; /* Prevent content overlap with the fixed header */
+}
 
-/* ✅ Header Layout & Styling */
+/* ✅ Header Styles */
 header {
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px; /* Adjusted padding for better spacing */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  left: 0;
+  padding: 8px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 header a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
   display: flex;
   gap: 50px;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 nav a {
-  text-decoration: none;
   color: #000;
   font-size: 18px;
+  text-decoration: none;
   transition: 0.3s ease;
 }
 
@@ -46,34 +62,42 @@ nav a:hover {
   font-weight: 600;
 }
 
-/* ✅ Button Styling */
-button {
+/* Style for the hamburger menu icon */
+nav img {
+  width: 3px; /* Adjust size as needed */
+  height: auto;
   cursor: pointer;
-  position: relative;
-  padding: 10px 24px;
-  font-size: 18px;
-  color: rgb(0, 0, 0);
+  display: none; /* Initially hidden for larger screens */
+}
+
+/* ✅ Button Styles */
+button {
+  background-color: transparent;
   border: 1.5px solid rgb(0, 0, 0);
   border-radius: 25px;
-  background-color: transparent;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 18px;
   font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
   overflow: hidden;
+  padding: 10px 24px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 button::before {
+  background-color: rgb(0, 0, 0);
+  border-radius: inherit;
+  color: white;
   content: '';
-  position: absolute;
+  height: 50px;
   inset: 0;
   margin: auto;
-  width: 50px;
-  height: 50px;
-  border-radius: inherit;
+  position: absolute;
   scale: 0;
-  z-index: -1;
-  color: white;
-  background-color: rgb(0, 0, 0);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  width: 50px;
+  z-index: -1;
 }
 
 button:hover::before {
@@ -81,83 +105,77 @@ button:hover::before {
 }
 
 button:hover {
+  box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
   color: #ffffff;
   scale: 1.1;
-  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
 }
 
 button:active {
   scale: 1;
 }
 
-
-/* ✅ About Section Layout */
+/* ✅ About Section Styles */
 .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px; /* Increased padding for breathing space */
-  gap: 50px; /* Added flex gap for space between text and image */
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Vertically aligns items */
+  justify-content: space-between; /* Adds space between text and image */
+  gap: 50px; /* Adds spacing between the text and image */
+  padding: 6px 40px; /* Adds padding around the section */
+  align-items: flex-start;
 }
 
-/* ✅ Text Column Styling */
 .side1 {
-  flex: 1;
-  font-size: 20px;
+  flex: 1; /* Ensures the text takes up equal space */
 }
 
 .side1 p {
-  margin-bottom: 20px; /* Added margin-bottom for paragraph spacing */
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
-/* ✅ Image Column Styling */
 .side2 {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex: 1; /* Ensures the image takes up equal space */
+  display: flex; /* Centers the image */
+  justify-content: center; /* Horizontally centers the image */
+  align-items: center; /* Vertically centers the image */
 }
 
 .side2 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px; /* Rounded corners */
-  margin: 0 auto;
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; 
+  border-radius: 650px; /* Adds rounded corners */
 }
 
-/* ✅ Hover Effect for Highlighted Name */
+/* ✅ Highlighted Name Hover Effect */
 .info {
-  color: aqua;
+  background-color: rgb(0, 0, 0);
+  color: rgb(252, 252, 252);
+  font-size: 40px;
   transition: 0.5s ease;
 }
 
 .info:hover {
-  color: red;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
   font-weight: 600;
 }
 
-/* ✅ Responsive Design: Mobile Optimization */
+/* ✅ Responsive Design */
 @media (max-width: 768px) {
-
-  /* Stack header items vertically */
   header {
     flex-direction: column;
     gap: 10px;
     text-align: center;
   }
 
-  /* Stack nav links vertically */
   nav ul {
     flex-direction: column;
     gap: 20px;
   }
 
-  /* Stack about-section content vertically */
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px; /* Reduced padding for mobile screens */
+  nav ul {
+    display: none; /* Hide the navigation links */
   }
 
-}
-}
+  nav img {
+    display: block; /* Show the hamburger menu */

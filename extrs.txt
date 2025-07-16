@@ -1,0 +1,16 @@
+            <br>
+            software engineering student at
+            <br>
+            <span class="info">KCA University</span> , professional
+            bug finder, and front-end code wrangler. I turn coffee ☕ and late
+            nights 🌙 into beautiful, responsive
+            websites.
+            <br><br>
+            Currently on a mission to master HTML, CSS, JavaScript</a>, and make
+          buttons that actually do stuff. When I'm
+          not
+          coding, I'm probably Googling how to fix what I just broke, or
+          plotting my next tech idea. Let’s make the web
+          a
+          cooler place together!
+          <br>
